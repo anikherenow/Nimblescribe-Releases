@@ -9,7 +9,7 @@
 [![Latest Release](https://img.shields.io/github/v/release/anikherenow/Nimblescribe-Releases?style=flat-square&color=A855F7&label=latest%20release)](../../releases/latest)
 [![Total Downloads](https://img.shields.io/github/downloads/anikherenow/Nimblescribe-Releases/total?style=flat-square&color=10B981&label=total%20downloads)](../../releases)
 [![macOS](https://img.shields.io/badge/macOS-13%2B%20%C2%B7%20Apple%20Silicon-black?style=flat-square&logo=apple)](../../releases/latest/download/NimbleScribe.dmg)
-[![Windows](https://img.shields.io/badge/Windows-10%2F11%20%C2%B7%20x64-0078D4?style=flat-square&logo=windows)](../../releases/latest/download/NimbleScribe.msix)
+[![Windows](https://img.shields.io/badge/Windows-10%2F11%20%C2%B7%20x64-0078D4?style=flat-square&logo=windows)](../../releases/latest/download/NimbleScribeSetup.exe)
 
 [Website](https://nimblescribe.nimblesl.com) · [Download](#-download) · [What's New](../../releases) · [Docs](https://nimblescribe.nimblesl.com/docs) · [Report a Bug](../../issues)
 
@@ -42,8 +42,8 @@ macOS 13 Ventura or later · Apple Silicon M1–M4
 
 ### 🪟 Windows
 
-<a href="https://github.com/anikherenow/Nimblescribe-Releases/releases/latest/download/NimbleScribe.msix">
-  <img src="https://img.shields.io/badge/Download-NimbleScribe.msix-0078D4?style=for-the-badge&logo=windows" alt="Download for Windows" />
+<a href="https://github.com/anikherenow/Nimblescribe-Releases/releases/latest/download/NimbleScribeSetup.exe">
+  <img src="https://img.shields.io/badge/Download-NimbleScribeSetup.exe-0078D4?style=for-the-badge&logo=windows" alt="Download for Windows" />
 </a>
 
 Windows 10 or 11 (x64) · Intel or AMD
@@ -90,8 +90,7 @@ No switching apps. No clipboard. No waiting. Just speak and continue.
 
 | Version | Date | macOS | Windows | Highlights |
 |---------|------|-------|---------|------------|
-| **v0.3.0** *(latest)* | Jun 2026 | [.dmg](../../releases/latest/download/NimbleScribe.dmg) | [.msix](../../releases/latest/download/NimbleScribe.msix) | Windows launch · CI/CD pipeline |
-| v0.2.1 | Jun 2026 | [.dmg](../../releases/download/v0.2.1/NimbleScribe.dmg) | — | Resizable AI sidebar · persistent chat history |
+| **v0.2.1** *(latest)* | Jun 2026 | [.dmg](../../releases/download/v0.2.1/NimbleScribe.dmg) | [.exe](../../releases/download/v0.2.1/NimbleScribeSetup.exe) | Windows launch · CI/CD pipeline · resizable AI sidebar |
 | v0.1.1 | Jun 2026 | [.dmg](../../releases/download/v0.1.1/NimbleScribe.dmg) | — | Bug fixes |
 | v0.1.0 | Jun 2026 | [.dmg](../../releases/download/v0.1.0/NimbleScribe.dmg) | — | Initial release |
 
@@ -120,7 +119,7 @@ No switching apps. No clipboard. No waiting. Just speak and continue.
 | **RAM** | 8 GB minimum · 16 GB recommended when running large model + AI together |
 | **Storage** | ~200 MB app · 300 MB – 1.5 GB per Whisper model · ~500 MB AI model |
 | **Internet** | Required once for initial model download — fully offline after that |
-| **Install** | Enable Developer Mode or Sideload apps in Windows Settings before installing the MSIX |
+| **Install** | Double-click `NimbleScribeSetup.exe` — if SmartScreen appears, click **More info → Run anyway** |
 
 ---
 
@@ -136,11 +135,10 @@ No switching apps. No clipboard. No waiting. Just speak and continue.
 
 ### Windows
 
-1. [**Download NimbleScribe.msix**](https://github.com/anikherenow/Nimblescribe-Releases/releases/latest/download/NimbleScribe.msix)
-2. Enable **Developer Mode**: Windows Settings → System → For Developers → On
-   *(alternatively: Settings → Apps → Advanced app settings → Choose where to get apps → Anywhere)*
-3. Double-click `NimbleScribe.msix` → click **Install**
-4. Launch NimbleScribe from the Start Menu
+1. [**Download NimbleScribeSetup.exe**](https://github.com/anikherenow/Nimblescribe-Releases/releases/latest/download/NimbleScribeSetup.exe)
+2. Double-click `NimbleScribeSetup.exe` to run the installer
+3. If Windows SmartScreen appears, click **More info → Run anyway**
+4. Follow the installer — NimbleScribe will be added to your Start Menu and Desktop
 5. Open **Settings → Models**, download a Whisper model, and start dictating
 
 ---
@@ -163,9 +161,9 @@ Right-click (or Control-click) **NimbleScribe.app** in Applications → **Open**
 </details>
 
 <details>
-<summary><strong>"Windows protected your PC" — installation warning</strong></summary>
+<summary><strong>"Windows protected your PC" — SmartScreen warning</strong></summary>
 
-NimbleScribe is currently distributed as an unsigned MSIX. Click **More info → Run anyway**. You also need **Developer Mode** enabled in Windows Settings before installing. We are working on obtaining an EV code-signing certificate to remove this requirement in a future release.
+NimbleScribe is distributed as an unsigned EXE installer. Windows SmartScreen may show a warning on first run. Click **More info → Run anyway** to proceed. This warning appears because the app is not yet code-signed — we are working on obtaining a code-signing certificate to remove it in a future release.
 
 </details>
 
